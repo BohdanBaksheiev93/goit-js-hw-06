@@ -7,15 +7,10 @@ const ingredients = [
   'Condiments',
 ];
 
-const ulList = document.createElement("ul");
+const ulList = document.querySelector("#ingredients");
 
 ingredients.forEach(ingredient => {
   const liEl = document.createElement("li");
   liEl.textContent = ingredient;
   ulList.appendChild(liEl);
 });
-
-const ingrClass = document.querySelector("#ingredients");
-ingrClass.insertAdjacentElement("afterend", ulList);
-
-console.log(ulList);

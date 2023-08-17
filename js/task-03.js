@@ -16,11 +16,9 @@ const images = [
 
 const ulList = document.querySelector(".gallery");
 
-images.forEach(image => {
-  ulList.insertAdjacentHTML("beforeend", `<li><img src="${image.url}" alt="${image.alt}"></li>`);
-});
+const imagesHTML = images.map(image => `<li><img src="${image.url}" alt="${image.alt}"></li>`).join("");
 
-console.log(ulList);
+ulList.insertAdjacentHTML("beforeend", imagesHTML);
 
 ulList.style.display = "flex";
 ulList.style.gap = "20px";
